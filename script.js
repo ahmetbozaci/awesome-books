@@ -14,7 +14,7 @@ function addBook() {
 function displayBooks() {
     let book = ""
     for (let i = 0; i < bookArray.length; i++){ 
-       book += `${bookArray[i].title} ${bookArray[i].author} <br>`
+       book += `${bookArray[i].title} ${bookArray[i].author} <button type="button" onclick=">Add</button><br>`
   }
   document.getElementById("bookList").innerHTML = book 
 }
