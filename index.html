@@ -13,21 +13,11 @@
    
   </p>
   <form action="#">
-    <input type="text" placeholder="Title"></form><br>
-    <input type="text" placeholder="Author"><br><br>
-    <button type="submit">Add</button> 
+    <input type="text" placeholder="Title" id="title"></form><br>
+    <input type="text" placeholder="Author" id="author"><br><br>
+    <button type="button" onclick="addBook()">Add</button> 
   </form>
-  <script>
-    function Books (title, author) {
-    this.title = title;
-    this.author = author;
-}
 
-const bookInfo = new Books("1984", "Author Name");
-
-
-document.getElementById("boo").innerHtml = bookInfo.title + bookInfo.author;
-  </script>
-  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
 </body>
 </html>
