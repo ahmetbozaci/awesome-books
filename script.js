@@ -14,8 +14,15 @@ function addBook() {
 function displayBooks() {
     let book = ""
     for (let i = 0; i < bookArray.length; i++){ 
-       book += `${bookArray[i].title} ${bookArray[i].author} <br>`
+      
+       book += `${bookArray[i].title} ${bookArray[i].author} <button onclick="removeBook()" type="button" id="remove">Remove</button>  <br>`
   }
   document.getElementById("bookList").innerHTML = book 
 }
+
+function removeBook() {
+  let obj = document.getElementById("remove");
+  obj.remove();
+}
+
 
