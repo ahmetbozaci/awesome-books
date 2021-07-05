@@ -11,10 +11,15 @@ function addBook () {
   bookArray.push(newBook)
 }
 
-function displayBooks () {
-    for (let i = 0; i < bookArray.length; i++) {
-        console.log(bookArray[i].title);
-    }
+function displayBooks() {
+    
+    for (let i = 0; i < bookArray.length; i++){ 
+      let item = document.createElement("li"); 
+      let title = document.createTextNode("titletest")
+      //let title = bookArray[i].title;
+      //let author = bookArray[i].author;
+      item.appendChild(title)
+      document.getElementById("bookList").appendChild(item);
+  }
 }
 
-document.getElementById("boo").innerHTML = bookInfo.title + bookInfo.author;
