@@ -4,3 +4,6 @@ body {
   width: 50%;
   padding: 100px;
 }
+ul li {
+  list-style-type: none;
+}

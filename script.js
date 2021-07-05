@@ -15,8 +15,11 @@ function addBook() {
 function displayBooks() {
   let book = '';
   for (let i = 0; i < bookArray.length; i += 1) {
-    book = `${i + 1}. ${bookArray[i].title} - ${bookArray[i].author} <br>`;
+    book = `<li id="${i + 1}"> ${bookArray[i].title} - ${bookArray[i].author} <button type='button' onclick="removeBook()">Remove Book</button><li><hr>  `;
   }
   document.getElementById('bookList').innerHTML += book;
+}
+
+function removeBook() {
 }
 /* eslint-enable no-unused-vars */
