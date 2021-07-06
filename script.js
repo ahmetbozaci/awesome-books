@@ -8,16 +8,15 @@ function Book(title, author) {
   this.author = author;
 }
 
-function createList(title,author){
-  const li = document.createElement('li')
-  li.textContent = `${title} - by ${author}`
+function createList(title, author) {
+  const li = document.createElement('li');
+  li.textContent = `${title} - by ${author}`;
   let button = document.createElement('button');
-  button.innerHTML = "Submit";
-  button.onclick = function(itemId){
+  button.innerHTML = "Button";
+  button.onclick = function(itemId) {
     let item = document.getElementById(itemId);
     item.parentNode.removeChild(item);
-    localStorage.function("item");
-  }
+  };
   li.appendChild(button);
   const ul = document.getElementById("bookList")
   ul.appendChild(li);
