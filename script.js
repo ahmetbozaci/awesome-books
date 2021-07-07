@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars, no-use-before-define */
+
 const bookArray = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
 localStorage.setItem('books', JSON.stringify(bookArray));
 const library = JSON.parse(localStorage.getItem('books'));
@@ -40,3 +41,4 @@ function addBook() {
 }
 
 library.forEach((item) => { createList(item.title, item.author); });
+/* eslint-enable no-unused-vars, no-use-before-define */
