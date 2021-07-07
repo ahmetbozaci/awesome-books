@@ -1,22 +1,22 @@
-/* eslint-disable no-unused-vars, no-use-before-define */
+/* eslint-disable no-unused-vars, no-use-before-define, class-methods-use-this */
 
 const bookArray = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
 localStorage.setItem('books', JSON.stringify(bookArray));
 const library = JSON.parse(localStorage.getItem('books'));
 
 class Library {
-  constructor(title, author){
+  constructor(title, author) {
     this.title = title;
     this.author = author;
   }
 
-  get addBook() {
+  addBook() {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const newBook = new Library(title, author);
     bookArray.push(newBook);
     localStorage.setItem('books', JSON.stringify(bookArray));
-    createList(title, author);
+    this.createList(newBook);
   }
 
   removeBook(e) {
@@ -26,36 +26,28 @@ class Library {
     localStorage.setItem('books', JSON.stringify(bookArray));
     const updatedLibrary = JSON.parse(localStorage.getItem('books'));
     document.getElementById('bookList').innerHTML = '';
-    updatedLibrary.forEach((item) => { createList(item.title, item.author); });
+    updatedLibrary.forEach((item) => {
+      const libr = new Library(item.title, item.author);
+      libr.createList(libr);
+    });
+  }
+
+  createList(newBook) {
+    const li = document.createElement('li');
+    li.textContent = `${newBook.title} - by ${newBook.author}`;
+    const button = document.createElement('button');
+    button.setAttribute('class', 'rmItem');
+    button.innerHTML = 'Remove';
+    button.addEventListener('click', newBook.removeBook);
+    li.appendChild(button);
+    const ul = document.getElementById('bookList');
+    ul.appendChild(li);
   }
 }
 
-let lib = new Library()
-let rmBook = lib.removeBook
-
-function createList(title, author) {
-  const li = document.createElement('li');
-  li.textContent = `${title} - by ${author}`;
-  const button = document.createElement('button');
-  button.setAttribute('class', 'rmItem');
-  button.innerHTML = 'Remove';
-  button.addEventListener('click', rmBook);
-  li.appendChild(button);
-  const ul = document.getElementById('bookList');
-  ul.appendChild(li);
-}
-
-// function removeBook(e) {
-//   const takeItem = document.querySelectorAll('.rmItem');
-//   const bookIndex = bookArray.indexOf.call(takeItem, e.target);
-//   bookArray.splice(bookIndex, 1);
-//   localStorage.setItem('books', JSON.stringify(bookArray));
-//   const updatedLibrary = JSON.parse(localStorage.getItem('books'));
-//   document.getElementById('bookList').innerHTML = '';
-//   updatedLibrary.forEach((item) => { createList(item.title, item.author); });
-// }
-
-
-
-library.forEach((item) => { createList(item.title, item.author); });
-/* eslint-enable no-unused-vars, no-use-before-define */
+const lib = new Library();
+library.forEach((item) => {
+  const libr = new Library(item.title, item.author);
+  lib.createList(libr);
+});
+/* eslint-enable no-unused-vars, no-use-before-define, class-methods-use-this */
