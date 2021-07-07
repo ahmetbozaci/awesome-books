@@ -18,9 +18,20 @@ class Library {
     localStorage.setItem('books', JSON.stringify(bookArray));
     createList(title, author);
   }
+
+  removeBook(e) {
+    const takeItem = document.querySelectorAll('.rmItem');
+    const bookIndex = bookArray.indexOf.call(takeItem, e.target);
+    bookArray.splice(bookIndex, 1);
+    localStorage.setItem('books', JSON.stringify(bookArray));
+    const updatedLibrary = JSON.parse(localStorage.getItem('books'));
+    document.getElementById('bookList').innerHTML = '';
+    updatedLibrary.forEach((item) => { createList(item.title, item.author); });
+  }
 }
 
 let lib = new Library()
+let rmBook = lib.removeBook
 
 function createList(title, author) {
   const li = document.createElement('li');
@@ -28,21 +39,21 @@ function createList(title, author) {
   const button = document.createElement('button');
   button.setAttribute('class', 'rmItem');
   button.innerHTML = 'Remove';
-  button.addEventListener('click', removeBook);
+  button.addEventListener('click', rmBook);
   li.appendChild(button);
   const ul = document.getElementById('bookList');
   ul.appendChild(li);
 }
 
-function removeBook(e) {
-  const takeItem = document.querySelectorAll('.rmItem');
-  const bookIndex = bookArray.indexOf.call(takeItem, e.target);
-  bookArray.splice(bookIndex, 1);
-  localStorage.setItem('books', JSON.stringify(bookArray));
-  const updatedLibrary = JSON.parse(localStorage.getItem('books'));
-  document.getElementById('bookList').innerHTML = '';
-  updatedLibrary.forEach((item) => { createList(item.title, item.author); });
-}
+// function removeBook(e) {
+//   const takeItem = document.querySelectorAll('.rmItem');
+//   const bookIndex = bookArray.indexOf.call(takeItem, e.target);
+//   bookArray.splice(bookIndex, 1);
+//   localStorage.setItem('books', JSON.stringify(bookArray));
+//   const updatedLibrary = JSON.parse(localStorage.getItem('books'));
+//   document.getElementById('bookList').innerHTML = '';
+//   updatedLibrary.forEach((item) => { createList(item.title, item.author); });
+// }
 
 
 
