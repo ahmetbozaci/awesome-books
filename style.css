@@ -2,7 +2,7 @@ body * {
   font-family: "Zen Loop", cursive;
 }
 
-li {
+/* li {
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -10,4 +10,7 @@ li {
 
 li:nth-child(2n) {
   background: #ccc;
+} */
+ .nav-link {
+  padding: -0.5rem 1rem;
 }
