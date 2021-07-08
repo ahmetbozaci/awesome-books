@@ -1,7 +1,14 @@
 body * {
-  font-family: 'Zen Loop', cursive;
+  font-family: "Zen Loop", cursive;
 }
 li {
   display: flex;
   justify-content: space-between;
+}
+
+li {
+  background: #fff;
+}
+li:nth-child(2n) {
+  background: #ccc;
 }
