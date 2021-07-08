@@ -26,23 +26,23 @@
         <a class="navbar-brand" href="#">Awesome Books</a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item p-0">
-            <a class="nav-link p-1 bg-light " href="">List</a>
+            <a class="nav-link p-1 bg-light" id="list-link" href="#list-content">List</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link p-1 bg-light border-end border-start" href="">Add New</a>
+            <a class="nav-link p-1 bg-light border-end border-start" id="add-new-link" href="#add-new-content">Add New</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link p-1 bg-light " href="#">Contact</a>
+            <a class="nav-link p-1 bg-light" id="contact-link" href="#contact-content">Contact</a>
           </li>
         </ul>
       </div>
-    </nav>
-
-    <div class="border border-3 rounded w-50 m-auto">
+    </nav> 
+    <div class="border border-3 rounded w-50 m-auto" id="list-content">
       <ul id="bookList" class="list-unstyled"></ul>
     </div>
-    <div class="mt-5 w-25 m-auto text-center">
-      <h1 class="display-5 pt-3 border-top border-3">Add a new book</h1>
+
+    <div class="mt-5 w-25 m-auto text-center" id="add-new-content">
+      <h1 class="display-5 pt-3 border-3">Add a new book</h1>
       <form class="mb-5" action="#">
         <input
           class="w-100 p-1 mt-2 border-2 rounded"
@@ -68,7 +68,7 @@
       </form>
     </div><br>
 
-    <div class="text-center m-5">
+    <div class="text-center m-5" id="contact-content">
       <h1 class="#">Contact Information</h1>
       <p>Do you have any questions or you just want to say "Hello"?</p> 
       <p class="#">You can reach out to us!</p>
@@ -77,19 +77,10 @@
         <li>Our Twitter: <a href="https://twitter.com/ahmtbozaci">Ahmet Bozaci</a> <a href="https://twitter.com/elyor-doniyorov">Elyor Doniyorov</a></li><br>
       </ul>
     </div>
-
+        <div class=footer>
       <p class="m-5 bg-light border border-2 text-start ps-4 fs-5">Copyright &copy; 2021 By Ahmet & Elyor</p>
     
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

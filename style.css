@@ -21,3 +21,23 @@ li:nth-child(2n) {
 .info li:nth-child(2n) {
   background: #ccc;
 }
+
+div[id^="list-content"],
+div[id^="contact-content"],
+div[id^="add-new-content"] {
+  display: none;
+}
+
+div[id^="list-content"]:target,
+div[id^="contact-content"]:target,
+div[id^="add-new-content"]:target {
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+ 
+}
