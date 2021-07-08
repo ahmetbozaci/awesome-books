@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars, no-use-before-define, class-methods-use-this */
 
-const bookArray = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+const bookArray = localStorage.getItem('books')
+  ? JSON.parse(localStorage.getItem('books'))
+  : [];
 localStorage.setItem('books', JSON.stringify(bookArray));
 const library = JSON.parse(localStorage.getItem('books'));
 
@@ -13,10 +15,12 @@ class Library {
   addBook() {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
-    const newBook = new Library(title, author);
-    bookArray.push(newBook);
-    localStorage.setItem('books', JSON.stringify(bookArray));
-    this.createList(newBook);
+    if (title !== '' && author !== '') {
+      const newBook = new Library(title, author);
+      bookArray.push(newBook);
+      localStorage.setItem('books', JSON.stringify(bookArray));
+      this.createList(newBook);
+    }
   }
 
   removeBook(e) {
