@@ -2,7 +2,7 @@ body * {
   font-family: "Zen Loop", cursive;
 }
 
-/* li {
+li {
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -10,5 +10,14 @@ body * {
 
 li:nth-child(2n) {
   background: #ccc;
-} */
-/* 
+}
+
+.info li {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info li:nth-child(2n) {
+  background: #ccc;
+}
