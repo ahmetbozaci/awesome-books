@@ -1,10 +1,7 @@
-body {
-  background-color: aqua;
-  margin: auto;
-  width: 50%;
-  padding: 100px;
+body * {
+  font-family: 'Zen Loop', cursive;
 }
-
-ul li {
-  list-style-type: none;
+li {
+  display: flex;
+  justify-content: space-between;
 }
