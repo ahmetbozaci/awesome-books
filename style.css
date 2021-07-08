@@ -11,6 +11,4 @@ body * {
 li:nth-child(2n) {
   background: #ccc;
 } */
- .nav-link {
-  padding: -0.5rem 1rem;
-}
+/* 
