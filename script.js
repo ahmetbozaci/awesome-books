@@ -37,7 +37,7 @@ class Library {
     li.textContent = `${newBook.title} - by ${newBook.author}`;
     const button = document.createElement('button');
     button.setAttribute('class', 'rmItem');
-    li.setAttribute('class', 'fs-3 mt-1 p-2')
+    li.setAttribute('class', 'fs-3 mt-1 p-2');
     button.innerHTML = 'Remove';
     button.addEventListener('click', newBook.removeBook);
     li.appendChild(button);
