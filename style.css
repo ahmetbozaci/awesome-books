@@ -1,7 +1,10 @@
-body * {
+body *  {
+  position: relative;
+}
+
+.font  {
   font-family: "Zen Loop", cursive;
   font-weight: 600;
-  position: relative;
 }
 
 li {
@@ -32,14 +35,15 @@ div[id^="add-new-content"]:target {
   width: 85%;
 }
 
-#list-content {
+.list-content {
   margin-bottom: 100px;
 }
 
-.contact  a {
+.contact a {
   text-decoration: none;
-  color: rgba(0,0,0,.9);
+  color: rgba(0, 0, 0, .9);
 }
+
 .contact li:nth-child(2n) {
   background: #fff;
 }
