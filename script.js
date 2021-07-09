@@ -56,3 +56,7 @@ library.forEach((item) => {
   lib.createList(libr);
 });
 /* eslint-enable no-unused-vars, no-use-before-define, class-methods-use-this */
+
+const time = document.getElementById("local-time")
+const now = luxon.DateTime.now()
+time.innerHTML = now.toLocaleString(luxon.DateTime.DATETIME_MED)

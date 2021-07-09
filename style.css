@@ -40,9 +40,13 @@ div[id^="add-new-content"]:target {
   position: fixed;
   bottom: 0;
   width: 90%;
-  margin-top: auto;
+ 
 }
 
 #list-content {
-  margin-bottom: 100px;
+  margin-bottom: 100px
+}
+.local-time {
+  color: red;
+  flo
 }

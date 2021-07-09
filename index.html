@@ -21,7 +21,7 @@
   </head>
   <body class="container text-center">
     
-    <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light border mb-5 mt-3 fs-2">
+    <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light border  mt-3 fs-2">
       <div class="container-fluid">
         <a class="navbar-brand fs-2" href="#">Awesome Books</a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -37,7 +37,10 @@
         </ul>
       </div>
     </nav>
-    
+    <div class="mb-5 text-end mt-1 fs-3">
+      <span id="local-time">time</span>
+    </div>
+
     <div class="w-50 mx-auto" id="list-content">
       <h1 class="fw-bold">All Awesome Books</h1> 
       <ul id="bookList" class="list-unstyled border border-3 rounded"></ul>
@@ -85,6 +88,8 @@
       <p class="m-5 p-1 bg-light border border-2 text-start ps-4 fs-5">Copyright &copy; 2021 By Ahmet & Elyor</p>
     
     </div>
+    <script src="https://moment.github.io/luxon/global/luxon.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
