@@ -14,16 +14,6 @@ li:nth-child(2n) {
   background: #ccc;
 }
 
-.info li {
-  background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.info li:nth-child(2n) {
-  background: #ccc;
-}
-
 div[id^="list-content"],
 div[id^="contact-content"],
 div[id^="add-new-content"] {
@@ -44,4 +34,12 @@ div[id^="add-new-content"]:target {
 
 #list-content {
   margin-bottom: 100px;
+}
+
+.contact  a {
+  text-decoration: none;
+  color: rgba(0,0,0,.9);
+}
+.contact li:nth-child(2n) {
+  background: #fff;
 }

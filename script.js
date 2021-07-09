@@ -38,7 +38,7 @@ class Library {
 
   createList(newBook) {
     const li = document.createElement('li');
-    li.textContent = `${newBook.title} - by ${newBook.author}`;
+    li.textContent = `${newBook.title}  by ${newBook.author}`;
     const button = document.createElement('button');
     button.setAttribute('class', 'rmItem');
     li.setAttribute('class', 'fs-3 mt-1 p-2');
