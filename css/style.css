@@ -36,12 +36,12 @@ div[id^="add-new-content"]:target {
 }
 
 .list-content {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .contact a {
   text-decoration: none;
-  color: rgba(0, 0, 0, .9);
+  color: #000
 }
 
 .contact li:nth-child(2n) {
