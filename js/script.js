@@ -1,6 +1,8 @@
-/* eslint-disable no-unused-vars, no-use-before-define, class-methods-use-this */
+/* eslint-disable no-unused-vars, no-use-before-define, class-methods-use-this, no-undef */
 
-const bookArray = localStorage.getItem('books') ? JSON.parse(localStorage.getItem('books')) : [];
+const bookArray = localStorage.getItem('books')
+  ? JSON.parse(localStorage.getItem('books'))
+  : [];
 localStorage.setItem('books', JSON.stringify(bookArray));
 const library = JSON.parse(localStorage.getItem('books'));
 
@@ -13,10 +15,12 @@ class Library {
   addBook() {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
-    const newBook = new Library(title, author);
-    bookArray.push(newBook);
-    localStorage.setItem('books', JSON.stringify(bookArray));
-    this.createList(newBook);
+    if (title !== '' && author !== '') {
+      const newBook = new Library(title, author);
+      bookArray.push(newBook);
+      localStorage.setItem('books', JSON.stringify(bookArray));
+      this.createList(newBook);
+    }
   }
 
   removeBook(e) {
@@ -34,9 +38,10 @@ class Library {
 
   createList(newBook) {
     const li = document.createElement('li');
-    li.textContent = `${newBook.title} - by ${newBook.author}`;
+    li.textContent = `${newBook.title}  by ${newBook.author}`;
     const button = document.createElement('button');
     button.setAttribute('class', 'rmItem');
+    li.setAttribute('class', 'fs-3 mt-1 p-2');
     button.innerHTML = 'Remove';
     button.addEventListener('click', newBook.removeBook);
     li.appendChild(button);
@@ -50,4 +55,9 @@ library.forEach((item) => {
   const libr = new Library(item.title, item.author);
   lib.createList(libr);
 });
-/* eslint-enable no-unused-vars, no-use-before-define, class-methods-use-this */
+
+const time = document.getElementById('local-time');
+const now = luxon.DateTime.now();
+time.innerHTML = now.toLocaleString(luxon.DateTime.DATETIME_MED);
+
+/* eslint-enable no-unused-vars, no-use-before-define, class-methods-use-this, no-undef */

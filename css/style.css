@@ -1,0 +1,49 @@
+body {
+  position: relative;
+}
+
+.font {
+  font-family: "Zen Loop", cursive;
+  font-weight: 600;
+}
+
+li {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+li:nth-child(2n) {
+  background: #ccc;
+}
+
+div[id^="list-content"],
+div[id^="contact-content"],
+div[id^="add-new-content"] {
+  display: none;
+}
+
+div[id^="list-content"]:target,
+div[id^="contact-content"]:target,
+div[id^="add-new-content"]:target {
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 85%;
+}
+
+#list-content {
+  margin-bottom: 150px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact li:nth-child(2n) {
+  background: #fff;
+}
