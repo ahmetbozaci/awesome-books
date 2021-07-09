@@ -39,14 +39,10 @@ div[id^="add-new-content"]:target {
 .footer {
   position: fixed;
   bottom: 0;
-  width: 90%;
+  width: 85%;
  
 }
 
 #list-content {
   margin-bottom: 100px
-}
-.local-time {
-  color: red;
-  flo
 }
