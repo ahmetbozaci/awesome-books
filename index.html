@@ -21,9 +21,9 @@
   </head>
   <body class="container text-center">
     
-    <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light border my-3">
+    <nav class="navbar navbar-expand-lg p-0 navbar-light bg-light border mb-5 mt-3 fs-2">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Awesome Books</a>
+        <a class="navbar-brand fs-2" href="#">Awesome Books</a>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item p-0">
             <a class="nav-link p-1 bg-light" id="list-link" href="#list-content">List</a>
@@ -36,49 +36,53 @@
           </li>
         </ul>
       </div>
-    </nav> 
-    <div class="border border-3 rounded w-50 m-auto" id="list-content">
-      <ul id="bookList" class="list-unstyled"></ul>
+    </nav>
+    
+    <div class=" w-50 m-auto" id="list-content">
+      <h1 class="fw-bold">All Awesome Books</h1> 
+      <ul id="bookList" class="list-unstyled border border-3 rounded"></ul>
     </div>
 
-    <div class="mt-5 w-25 m-auto text-center" id="add-new-content">
-      <h1 class="display-5 pt-3 border-3">Add a new book</h1>
-      <form class="mb-5" action="#">
+    <div class="w-25 mx-auto text-center fs-3" id="add-new-content">
+      <p class="fs-1  border-3">Add a new book</p>
+      <form action="#">
         <input
-          class="w-100 p-1 mt-2 border-2 rounded"
+          class="w-100 p-1  border-2 rounded"
           type="text"
           placeholder="Title"
           id="title"
           required
         /><br />
         <input
-          class="w-100 p-1 mt-2 border-2 rounded"
+          class="w-100 p-1 border-2 my-2 rounded"
           type="text"
           placeholder="Author"
           id="author"
           required
         /><br />
         <button
-          class="float-end mt-2 border-2 rounded"
+          class="float-end  border-2 rounded"
           type="submit"
           onclick="lib.addBook()"
         >
           Add New Book
         </button>
       </form>
-    </div><br>
+    </div>
 
-    <div class="text-center m-5" id="contact-content">
-      <h1 class="#">Contact Information</h1>
-      <p>Do you have any questions or you just want to say "Hello"?</p> 
-      <p class="#">You can reach out to us!</p>
-      <ul class="info w-25 m-auto">
-        <li>Our linkedIn: <a href="https://www.linkedin.com/in/ahmetbozaci/">Ahmet Bozaci</a> <a href="https://www.linkedin.com/in/elyor-doniyorov/">Elyor Doniyorov</a></li></li>
-        <li>Our Twitter: <a href="https://twitter.com/ahmtbozaci">Ahmet Bozaci</a> <a href="https://twitter.com/elyor-doniyorov">Elyor Doniyorov</a></li><br>
-      </ul>
+    <div class="text-center" id="contact-content">
+      <p class="fs-1">Contact Information</p>
+      <div class="fs-3">
+        <p>Do you have any questions or you just want to say "Hello"?</p> 
+        <p class="#">You can reach out to us!</p>
+        <ul class="info w-50 m-auto">
+          <li>Our linkedIn: <a href="https://www.linkedin.com/in/ahmetbozaci/">Ahmet Bozaci</a> <a href="https://www.linkedin.com/in/elyor-doniyorov/">Elyor Doniyorov</a></li></li>
+          <li>Our Twitter: <a href="https://twitter.com/ahmtbozaci">Ahmet Bozaci</a> <a href="https://twitter.com/elyor-doniyorov">Elyor Doniyorov</a></li><br>
+        </ul>
+      </div>
     </div>
         <div class=footer>
-      <p class="m-5 bg-light border border-2 text-start ps-4 fs-5">Copyright &copy; 2021 By Ahmet & Elyor</p>
+      <p class="m-5 p-1 bg-light border border-2 text-start ps-4 fs-5">Copyright &copy; 2021 By Ahmet & Elyor</p>
     
     </div>
     <script src="script.js"></script>
