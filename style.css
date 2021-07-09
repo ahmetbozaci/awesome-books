@@ -1,6 +1,7 @@
 body * {
   font-family: "Zen Loop", cursive;
   font-weight: 600;
+  position: relative;
 }
 
 li {
@@ -38,6 +39,10 @@ div[id^="add-new-content"]:target {
 .footer {
   position: fixed;
   bottom: 0;
-  width: 80%;
- 
+  width: 90%;
+  margin-top: auto;
+}
+
+#list-content {
+  margin-bottom: 100px;
 }
