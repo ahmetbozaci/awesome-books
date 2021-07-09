@@ -1,4 +1,4 @@
-body *  {
+body {
   position: relative;
 }
 
@@ -35,8 +35,8 @@ div[id^="add-new-content"]:target {
   width: 85%;
 }
 
-.list-content {
-  margin-bottom: 200px;
+#list-content {
+  margin-bottom: 150px;
 }
 
 .contact a {
