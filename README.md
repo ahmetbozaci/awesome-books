@@ -4,9 +4,7 @@
 
 >Library website. User can add book with title and author and remove them.
 
-![screenshot-1](img/screenshot-1.png)
-![screenshot-2](img/screenshot-2.png)
-![screenshot-3](img/screenshot-3.png)
+![screenshot-1](img/screenshot.gif)
 ## Built With
 
 - Html
