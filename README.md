@@ -1,47 +1,24 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# New Project
 
-# Awesome Books
+> ✨ Bootstrapped with Create Snowpack App (CSA).
 
->Library website. User can add book with title and author and remove them.
+## Available Scripts
 
-![screenshot-1](img/screenshot.gif)
-## Built With
+### npm start
 
-- Html
-- Javascript
+Runs the app in the development mode.
+Open http://localhost:8080 to view it in the browser.
 
-## Live Demo
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-[Awesome Books](https://ahmetbozaci.github.io/awesome-books/)
+### npm run build
 
-## Clone This Project
-```
-- $ git clone `$ https://github.com/ahmetbozaci/awesome-books.git`
-- $ cd awesome-books
-```
+Builds a static copy of your site to the `build/` folder.
+Your app is ready to be deployed!
 
-## Authors
+**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
 
-👤 **Ahmet Bozacı**
-- Github:[ahmtbozaci](https://github.com/ahmetbozaci)
-- Twitter:[ahmtbozaci](https://twitter.com/ahmtbozaci)
-- LinkedIn:[Ahmet Bozaci](https://www.linkedin.com/in/ahmetbozaci/)
+### Q: What about Eject?
 
-👤 **Elyor Doniyorov**
-- Github: [@elyor-doniyorov](https://github.com/elyor-doniyorov)
-- LinkedIn: [@elyor-doniyorov](www.linkedin.com/in/elyor-doniyorov)
-
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## 📝 License
-
-This project is [MIT](./LICENCE) licensed.
+No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
