@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
@@ -7,7 +8,9 @@
     "lint": "prettier --check \"src/**/*.{ts,js}\""
   },
   "dependencies": {
-    "canvas-confetti": "^1.2.0"
+    "@types/luxon": "^3.0.0",
+    "canvas-confetti": "^1.2.0",
+    "luxon": "^3.0.1"
   },
   "devDependencies": {
     "@snowpack/plugin-typescript": "^1.2.1",
