@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "@types/luxon": "^3.0.0",
+    "@types/uuid": "^8.3.4",
     "canvas-confetti": "^1.2.0",
-    "luxon": "^3.0.1"
+    "luxon": "^3.0.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@snowpack/plugin-typescript": "^1.2.1",
