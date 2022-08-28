@@ -9,6 +9,8 @@
 
 - Html
 - Javascript
+- Typescript
+- Snowpack
 
 ## Live Demo
 
@@ -18,6 +20,8 @@
 ```
 - $ git clone `$ https://github.com/ahmetbozaci/awesome-books.git`
 - $ cd awesome-books
+- $ npm install
+- $ npm start
 ```
 
 ## Authors
