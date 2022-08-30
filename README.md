@@ -20,7 +20,7 @@
 ```
 - $ git clone `$ https://github.com/ahmetbozaci/awesome-books.git`
 - $ cd awesome-books
-- $  npm install
+- $ npm install
 - $ npm start
 ```
 
