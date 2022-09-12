@@ -2,7 +2,7 @@
 
 # Awesome Books
 
->Library website. User can add book with title and author and remove them.
+>Library website. User can add book with title and author and remove them...
 
 ![screenshot-1](img/screenshot.gif)
 ## Built With
