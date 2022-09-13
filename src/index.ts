@@ -1,19 +1,40 @@
 import insertTime from './time';
-// import { Library, bookArray } from './book';
+import UI from './UI';
+import Library from './library';
+import { v4 as uuidV4 } from 'uuid';
+import Store from "./store";
 
 insertTime();
 
-// const run = () => {
-//   const form = document.getElementById('form') as HTMLButtonElement;
-//   form.addEventListener('click', () => {
-//     const bookObj = getNewBook();
-//     const library = new Library(bookObj.title, bookObj.author, bookObj.id);
-//     library.addBook();
-//   })
-// }
-// const bookObj = getNewBook();
-// const library = new Library(bookObj.title, bookObj.author, bookObj.id);
-// bookArray.forEach(item => {
-//   library.createList(item)
-// })
-// run();
+//! Event: Display Books
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
+
+//! Event: Add a Book
+const form = document.querySelector('form') as HTMLFormElement
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const titleInput = document.getElementById('title') as HTMLInputElement;
+  const titleValue = titleInput.value;
+  const authorInput = document.getElementById('author') as HTMLInputElement
+  const authorValue = authorInput.value;
+
+  if (titleValue === '' || authorValue === '') {
+    UI.showAlert('Please fill in all fields', 'danger')
+  } else {
+    const book = new Library(titleValue, authorValue, uuidV4())
+    UI.addBookToList(book)
+    Store.addBook(book)
+    UI.showAlert('Book added successfully', 'success')
+    UI.clearInputs();
+  }
+})
+
+//! Event: Remove Book
+document.getElementById('bookList')?.addEventListener('click', (event) => {
+  const target = event.target as HTMLUListElement
+  const { id } = target.parentElement as HTMLLIElement;
+  UI.deleteBook(target);
+  Store.removeBook(id)
+  UI.showAlert('Book Removed', 'info')
+})
