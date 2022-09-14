@@ -8,8 +8,8 @@ export default class Store {
     return bookArray;
   }
 
-  static setItem(books: Book):void {
-    localStorage.setItem('books', JSON.stringify(books));
+  static setItem(book: Book):void {
+    localStorage.setItem('books', JSON.stringify(book));
   }
 
   static addBook(book: Book):void {

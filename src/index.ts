@@ -10,13 +10,13 @@ insertTime();
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 //! Event: Add a Book
-const form = document.querySelector('form') as HTMLFormElement
+const form: HTMLFormElement = document.querySelector('form') as HTMLFormElement;
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const titleInput = document.getElementById('title') as HTMLInputElement;
+  const titleInput: HTMLInputElement = document.getElementById('title') as HTMLInputElement;
   const titleValue = titleInput.value;
-  const authorInput = document.getElementById('author') as HTMLInputElement
+  const authorInput: HTMLInputElement = document.getElementById('author') as HTMLInputElement
   const authorValue = authorInput.value;
 
   if (titleValue === '' || authorValue === '') {
@@ -32,7 +32,7 @@ form.addEventListener('submit', (event) => {
 
 //! Event: Remove Book
 document.getElementById('bookList')?.addEventListener('click', (event) => {
-  const target = event.target as HTMLUListElement
+  const target: HTMLUListElement = event.target as HTMLUListElement
   const { id } = target.parentElement as HTMLLIElement;
   UI.deleteBook(target);
   Store.removeBook(id)

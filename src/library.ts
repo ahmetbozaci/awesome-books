@@ -1,9 +1,9 @@
 import type Book from "./types";
 
 export default class Library implements Book {
-  title;
-  author;
-  id;
+  title: string;
+  author: string;
+  id: string;
 
   constructor(title: string, author: string, id: string) {
     this.title = title;
