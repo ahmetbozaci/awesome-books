@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./index.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap"
       rel="stylesheet"
     />
+    <script src="./dist/index.js" type="module"></script>
     <title>Awesome Books</title>
   </head>
   <body class="container text-center">
@@ -56,10 +57,12 @@
 
     <div class="w-50 mx-auto list font" id="list-content">
       <h1 class="fw-bold">All Awesome Books</h1>
+      <div class="test"></div>
       <ul id="bookList" class="list-unstyled border border-3 rounded"></ul>
     </div>
 
     <div class="w-25 mx-auto text-center fs-3 font" id="add-new-content">
+      <div class="test"></div>
       <p class="fs-1 border-3">Add a new book</p>
       <form action="#list-content">
         <input
@@ -67,19 +70,19 @@
           type="text"
           placeholder="Title"
           id="title"
-          required
+          
         />
         <input
           class="w-100 p-1 border-2 my-2 rounded"
           type="text"
           placeholder="Author"
           id="author"
-          required
+          
         />
         <button
           class="float-end border-2 rounded"
           type="submit"
-          onclick="lib.addBook()"
+          id="form"
         >
           Add New Book
         </button>
@@ -113,7 +116,5 @@
         Copyright &copy; 2021 By Ahmet & Elyor
       </p>
     </div>
-    <script src="https://moment.github.io/luxon/global/luxon.js"></script>
-    <script src="./js/script.js"></script>
   </body>
 </html>
